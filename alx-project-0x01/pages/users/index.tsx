@@ -1,7 +1,9 @@
+import UserCard from "@/components/common/UserCard"
+import { UserProps } from "@/interfaces"
 
-const Users = () => {
+const Users: React.FC<UserProps[]> = ({ posts }) => {
     return <div>
-        Users
+       {posts.map((user: UserProps) => <UserCard {...user}  />)}
     </div>
 }
 
